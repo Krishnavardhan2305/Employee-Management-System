@@ -1,0 +1,135 @@
+/* Admin Form Container */
+.admin-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url('https://t3.ftcdn.net/jpg/09/96/12/88/360_F_996128826_ZMFX5uAHC4yrIfVXWnwwevEzw5RtuLp0.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Form Content */
+.admin-form-content {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  animation: slideUp 0.8s ease-out;
+}
+
+/* Title */
+.admin-form-content h1 {
+  font-size: 36px;
+  text-transform: uppercase;
+  color: #2f2791;
+  font-family: "Cinzel", serif;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+/* Subtitle */
+.admin-form-content h2 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 20px;
+  font-family: "Cinzel", serif;
+}
+
+/* Label */
+.admin-form-content label {
+  display: block;
+  font-weight: bold;
+  color: #333;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 8px;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+/* Input and Select */
+.admin-form-content input,
+.admin-form-content select {
+  width: 90%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 16px;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+  outline: none;
+}
+
+/* Focus Effect */
+.admin-form-content input:focus,
+.admin-form-content select:focus {
+  border-color: #2f2791;
+  box-shadow: 0 0 0 2px rgba(47, 39, 145, 0.2);
+  transform: scale(1.02);
+}
+
+/* Button */
+.admin-form-content button {
+  background-color: #2f2791;
+  color: #ffffff;
+  border: none;
+  padding: 14px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%;
+}
+
+/* Button Hover */
+.admin-form-content button:hover {
+  background-color: #172a63;
+  transform: scale(1.05);
+}
+
+/* Error Message */
+.admin-form-content .error {
+  color: #ff4d4d;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* Success Message */
+.admin-form-content .message {
+  color: #4caf50;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

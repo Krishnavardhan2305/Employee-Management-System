@@ -1,0 +1,95 @@
+/* Main layout for promote employee section */
+.promote-employee-layout {
+  display: flex;
+}
+
+/* Employee list container styles */
+.employee-list-container {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Employee box styles */
+.employee-box {
+  border: 1px solid #ccc; /* Example border */
+  padding: 10px; /* Example padding */
+  margin: 10px 0; /* Example margin */
+  display: flex; /* Flexbox for layout */
+  background-color: #f9f9f9; /* Light background for better visibility */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Profile section styles */
+.profile {
+  text-align: center; /* Center the profile picture and name */
+  display: flex;
+  flex-direction: column; /* Stack image and text vertically */
+  align-items: center; /* Center align the items */
+  justify-content: center; /* Center align vertically */
+  width: 200px; /* Increased width for the profile section */
+}
+
+/* Profile image styles */
+.profile-image,
+.profile-image-placeholder {
+  width: 150px; /* Larger size for the image */
+  height: 150px; /* Larger size for the image */
+  border-radius: 50%; /* Circular shape */
+  background-color: #eaeaea; /* Placeholder background color */
+  object-fit: cover; /* Ensure the image scales properly */
+  display: flex; /* Flexbox for placeholder text */
+  align-items: center; /* Center placeholder text */
+  justify-content: center; /* Center placeholder text */
+  font-size: 14px; /* Text size for placeholder text */
+  color: #777; /* Placeholder text color */
+  margin-bottom: 10px; /* Space between image and name */
+  border: 2px solid #ccc; /* Add border around the image */
+}
+
+/* Employee name styling */
+.profile-name {
+  font-size: 18px; /* Adjust font size */
+  font-weight: bold; /* Make the name bold */
+  text-transform: uppercase; /* Capitalize the name */
+  margin: 0; /* Remove extra margin */
+}
+
+/* Styles for the details section */
+.details {
+  padding-left: 20px; /* Space between profile and details */
+  flex: 1; /* Let the details take remaining space */
+}
+
+/* Grid layout for employee details */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  gap: 10px; /* Space between grid items */
+  margin-top: 10px; /* Add spacing at the top */
+}
+
+/* Add styles for the detail headings */
+.detail-heading {
+  font-weight: bold; /* Make the heading bold */
+  text-transform: uppercase; /* Capitalize the heading text */
+  margin: 0; /* Remove default margin */
+  color: #333; /* Darker color for readability */
+}
+
+/* Style for the promote button */
+.promote-button {
+  background-color: #007bff; /* Blue background color for promote button */
+  color: white; /* Text color */
+  border: none; /* Remove default border */
+  padding: 8px 15px; /* Padding for the button */
+  cursor: pointer; /* Pointer cursor on hover */
+  margin-top: 10px; /* Spacing above the button */
+  border-radius: 5px; /* Rounded button corners */
+  font-size: 14px; /* Adjust font size */
+  transition: background-color 0.3s; /* Smooth hover effect */
+}
+
+.promote-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}

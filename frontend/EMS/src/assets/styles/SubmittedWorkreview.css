@@ -1,0 +1,67 @@
+.SubmittedWorkreview-container {
+  display: flex;
+  flex-direction: column; /* Sidebar and header on top */
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f9b3;
+  z-index: 1;
+  background-image: url('https://static.vecteezy.com/system/resources/previews/046/651/613/non_2x/modern-technology-background-glowing-blue-background-minimalist-background-free-vector.jpg');
+  background-size: cover; /* Cover the viewport */
+  background-position: center;
+}
+
+.SubmittedWorkreview-layout {
+  display: flex;
+  flex-direction: row; 
+  max-width: 5000px;
+  flex-wrap: wrap; 
+  gap: 20px; /* Space between work items */
+  padding: 50px; /* Overall padding */
+  overflow-y: auto; /* Enable scrolling if necessary */
+  align-items: center;
+  margin-left: 40%;
+}
+
+.submittedWorkCard {
+  
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  justify-content: space-between; /* Space out content */
+  background-color: #ffffffc9;
+  border: 2px solid #000000;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: left; /* Left align text for a professional look */
+  width: calc(30% - 20px); /* Adjust width for a responsive layout */
+}
+
+.submittedWorkCard h3 {
+  font-size: 18px; /* Heading size */
+  font-weight: bold;
+  margin-bottom: 10px; /* Space below heading */
+}
+
+.submittedWorkCard p {
+  font-size: 14px; /* Body text size */
+  margin-bottom: 10px; /* Space below paragraph */
+}
+
+.submittedWorkDetails {
+  display: flex;
+  justify-content: space-between; /* Space between details */
+  align-items: center; /* Center align vertically */
+  margin-top: 15px; /* Space above details */
+}
+
+.submittedWorkDetails a {
+  color: #1d2379; /* Link color */
+  text-decoration: none; /* Remove underline */
+  font-size: 14px; /* Font size for links */
+}
+
+.message-icon {
+  width: 20px; /* Icon size */
+  height: 20px; /* Icon size */
+  cursor: pointer; /* Pointer cursor on hover */
+}

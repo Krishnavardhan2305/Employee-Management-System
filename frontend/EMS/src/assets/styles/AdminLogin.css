@@ -1,0 +1,117 @@
+/* Main container for the admin login page */
+.admin-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Vertically center content */
+  height: 100vh; /* Full viewport height */
+  padding: 20px;
+  background-image: url('https://static.vecteezy.com/system/resources/previews/046/651/613/non_2x/modern-technology-background-glowing-blue-background-minimalist-background-free-vector.jpg');
+  background-size: cover; /* Cover the viewport */
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.5); /* Fallback color for better contrast */
+  font-family: 'Open Sans', sans-serif; /* Modern sans-serif font */
+}
+
+/* Login box container */
+.admin-login__box {
+  background-color: rgba(94, 93, 93, 0); /* Slightly transparent white */
+  border-radius: 10px; /* Smooth rounded corners */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Professional shadow */
+  padding: 50px; /* Internal spacing */
+  width: 100%;
+  max-width: 500px; /* Limit width for better aesthetics */
+  text-align: center; /* Center align all content inside */
+  box-shadow: 0 4px 10px black;
+}
+
+/* Title styling */
+.admin-login__title {
+  font-size: 28px; /* Larger, professional font size */
+  font-weight: bold;
+  color: #fffbfb; /* Darker gray for a modern look */
+  margin-bottom: 20px;
+  text-transform: uppercase; /* Uppercase for emphasis */
+  letter-spacing: 1px; /* Subtle letter spacing */
+}
+
+/* Login form styling */
+.admin-login__form {
+  display: flex;
+  background-color: rgba(94, 93, 93, 0);
+  flex-direction: column; /* Stack fields vertically */
+  gap: 20px; /* Consistent spacing between elements */
+}
+
+/* Form field wrapper */
+.admin-login__field {
+  text-align: left; /* Align labels and inputs to the left */
+}
+
+/* Label styling */
+.admin-login__field label {
+  font-size: 16px; /* Readable font size */
+  color: #101010; /* Subtle gray for labels */
+  font-weight: 600; /* Slightly bold for emphasis */
+  margin-bottom: 5px; /* Space between label and input */
+  display: block; /* Ensure proper alignment */
+}
+
+/* Input field styling */
+.admin-login__field input {
+  width: 90%; /* Full width of the parent container */
+  padding: 10px; /* Comfortable padding for input fields */
+  font-size: 16px; /* Modern font size */
+  border: 1px solid #ddd; /* Soft border */
+  border-radius: 5px; /* Rounded edges */
+  background-color: #f9f9f9; /* Light gray background */
+  transition: border-color 0.3s, box-shadow 0.3s; /* Smooth focus transition */
+}
+
+/* Focus effect on input fields */
+.admin-login__field input:focus {
+  border-color: #007BFF; /* Blue highlight for focus */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Subtle glow */
+  outline: none; /* Remove default outline */
+}
+
+/* Submit button styling */
+.admin-login__submit {
+  background-color: #007BFF; /* Primary blue color */
+  color: #fff; /* White text */
+  font-size: 18px; /* Professional font size */
+  font-weight: bold;
+  padding: 12px; /* Comfortable padding */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Smooth corners */
+  cursor: pointer; /* Pointer cursor for interactivity */
+  transition: background-color 0.3s, transform 0.2s; /* Smooth hover effects */
+}
+
+/* Hover effect on submit button */
+.admin-login__submit:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: scale(1.05); /* Slight scaling effect */
+}
+
+/* Error message styling */
+.admin-login__error {
+  font-size: 14px;
+  color: #ff4d4d; /* Bright red for errors */
+  margin-top: 10px;
+}
+
+/* Success message styling */
+.admin-login__message {
+  font-size: 14px;
+  color: #28a745; /* Bright green for success */
+  margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .admin-login__box {
+    padding: 20px; /* Reduce padding on smaller screens */
+    width: 100%; /* Use full width */
+  }
+}

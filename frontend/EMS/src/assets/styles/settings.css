@@ -1,0 +1,102 @@
+/* Settings Page Styles */
+.settings-container {
+    padding: 20px;
+    font-family: "Roboto Slab", serif;
+    background-image: url('https://static.vecteezy.com/system/resources/previews/046/651/613/non_2x/modern-technology-background-glowing-blue-background-minimalist-background-free-vector.jpg');
+    background-size: cover; /* Cover the viewport */
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Fallback color for better contrast */
+    height: 100vh;
+ 
+  }
+  
+  .tabs-container {
+    display: flex;
+    justify-content: space-around;
+    background-color: #ffffff77;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    margin: 50px 0;
+  }
+  
+  .tabs-container h3 {
+    cursor: pointer;
+    margin: 0;
+    padding: 12px 25px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    color: #ffffff;
+  }
+  
+  .active-tab {
+    background-color: #ffffff05;
+    color: white;
+  }
+  
+  .tabs-container h3:hover {
+    background-color: #414040;
+  }
+  
+  .content-container {
+    margin-top: 20px;
+    padding: 20px;
+  }
+  
+  .settings-info {
+    padding: 20px;
+    box-shadow: 0 4px 10px black;
+    border-radius: 8px;
+    background-color: #f9f9f910;
+    
+    /* background-image: url('https://www.digitalplatforms.co.za/wp-content/uploads/2015/11/Website-Design-Background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; */
+  }
+  
+  .settings-form {
+    display: flex;
+    flex-direction: column;
+  
+  }
+  
+  .settings-form label {
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-size: larger;
+    color: #fdfdfd;
+  }
+  
+  .settings-form input {
+    padding: 10px;
+    border: 1px solid #ffffff9d;
+    border-radius: 5px;
+    margin-top: 5px;
+    width: 90%;
+  }
+  
+  .settings-form button {
+    padding: 10px 20px;
+    background-color: #111212;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .settings-form button:hover {
+    background-color: #12125c;
+  }
+  
+  @media screen and (max-width: 860px) {
+    .settings-info {
+      padding: 15px;
+    }
+  
+    .settings-form input, .settings-form button {
+      width: 100%;
+    }
+  }
+  

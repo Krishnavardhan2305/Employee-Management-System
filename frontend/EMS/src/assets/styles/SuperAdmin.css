@@ -1,0 +1,87 @@
+.super-admin-container {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .super-admin-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #222;
+    font-weight: bold;
+  }
+  
+  .error-message {
+    color: red;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  .organization-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+  }
+  
+  .organization-box {
+    display: flex;
+    background-color: #ffffff;
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 450px;
+    padding: 30px;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .organization-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  .logo-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 150px;
+  }
+  
+  .organization-logo {
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+  }
+  
+  .no-logo {
+    color: #888;
+    font-size: 1rem;
+    text-align: center;
+  }
+  
+  .organization-details {
+    flex: 3;
+    padding-left: 25px;
+    text-align: left;
+  }
+  
+  .organization-details h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #222;
+    font-weight: bold;
+  }
+  
+  .organization-details p {
+    margin: 8px 0;
+    color: #444;
+    font-size: 1.2rem;
+  }
+  
+  .organization-details p strong {
+    color: #000;
+  }
+  

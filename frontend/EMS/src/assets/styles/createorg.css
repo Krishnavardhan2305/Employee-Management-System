@@ -1,0 +1,80 @@
+.createOrg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+    max-height: 60vh;
+    padding: 30px;
+    border: 2px solid cadetblue;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+    margin: 8%; 
+    background-image: url('https://img.stablecog.com/insecure/1920w/aHR0cHM6Ly9iLnN0YWJsZWNvZy5jb20vMTI0YmMzOTUtN2UyMC00YWVmLTkyNTMtNTFiNTQ5YzU2M2NjLmpwZWc.webp');
+      background-size: cover;
+      background-position: center;
+   
+      background-repeat: no-repeat;
+      
+  }
+  .createOrgmain{
+    margin: 50px;
+    border-radius: 50px;
+
+  }
+  .createOrgmain a{
+    text-decoration: none;
+    /* border: 1px solid red; */
+    cursor: pointer;
+    padding: 20px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    border-radius: 50px;
+  
+  }
+  .orgForm {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 40px;
+  }
+  
+  .orgForm input {
+    width: 90%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+  }
+  
+  .orgForm button {
+    padding: 10px;
+    border: 2px;
+    border-color: aliceblue;
+    border-radius: 5px;
+    background-color: #000000;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .orgForm button:hover {
+    background-color: #232188;
+  }
+  
+  .orgImage {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .orgImage img {
+    width: 60%;
+    height:60%
+  }
+.itag{
+  display:flex;
+  flex-direction: column;
+}
+  
