@@ -1,13 +1,27 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import UseGetAllOrganizations from '../../hooks/UseGetAllOrganizations';
 import '../../assets/styles/SuperAdmin.css';
 
 const SuperAdmin = () => {
   const { organizationData, loading, error } = UseGetAllOrganizations();
+  console.log(organizationData);
+  
+  const navigate = useNavigate();
+
+  const handleRevenueClick = () => {
+    navigate(`/superadmin/dashboard/revenue`);
+  };
 
   return (
     <div className="super-admin-container">
       <h2>Organization Overview</h2>
+      <button className="revenue-button" onClick={() => handleRevenueClick()}>
+        Show Revenue Status
+      </button>
+      <button onClick={()=>navigate('/')}>
+        Home
+      </button>
       {loading && <p>Loading data...</p>}
       {error && <p className="error-message">Error: {error}</p>}
       {!loading && !error && organizationData.length > 0 ? (

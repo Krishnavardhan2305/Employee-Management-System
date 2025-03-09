@@ -16,8 +16,8 @@ const SuperAdminLogin = () => {
         try 
         {  
             const url = `${ADMIN_API_ENDPOINT}/SuperAdminLogin`;
-            console.log("Making request to URL:", url);  
-            console.log({email,password});
+            // console.log("Making request to URL:", url);  
+            // console.log({email,password});
             const response = await axios.post(url, { superadminmail: email, superadminpassword: password });
 
             if (response.status === 200) {

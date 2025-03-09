@@ -22,6 +22,7 @@ import SuperAdmin from './Pages/AdminPages/SuperAdmin';
 import SuperAdminLogin from './Pages/AdminPages/SuperAdminLogin';
 import Mainbar from './Pages/AdminPages/mainbar';
 import ForgotPassword from './Pages/Employeepages/ForgotPassword';
+import SuperAdminRevenue from './Pages/AdminPages/SuperAdminRevenue';
 
 
 const appRouter = createBrowserRouter([
@@ -104,7 +105,11 @@ const appRouter = createBrowserRouter([
   {
     path: '/SuperAdmin/dashboard',
     element: <SuperAdmin/>
-  } 
+  },
+    {
+      path: '/SuperAdmin/dashboard/revenue',
+      element: <SuperAdminRevenue/>
+    } 
 ]);
 
 const App = () => {
