@@ -7,62 +7,60 @@ import transporter from "../utils/Transporter.js";
 import SuperAdmin from '../models/SuperAdmin.js';
 
 
-export const addemployee = async (req, res) => {
-    // console.log("Add Employee route hit"); 
-    const { employeeId, organizationId } = req.params;
-    const { empname, mail, password, age, Employeestatus, rating, projectspending } = req.body;
-  
-    try {
-        // console.log("from backend");
-        // console.log( empname, mail, password, age, Employeestatus, rating, projectspending);
+export const addemployee = async (req, res, next) => {
+  const { employeeId, organizationId } = req.params;
+  const { empname, mail, password, age, Employeestatus, rating, projectspending } = req.body;
+
+  try {
       const admin = await Employee.findById(employeeId);
       if (!admin) {
-        return res.status(404).json({ error: 'Admin not found' });
+          const error = new Error('Admin not found');
+          error.status = 404;
+          return next(error); 
       }
-      
+    
       const organization = await Organization.findById(organizationId);
       if (!organization) {
-        return res.status(404).json({ error: 'Organization not found' });
+          const error = new Error('Organization not found');
+          error.status = 404;
+          return next(error);
       }
-  
+
       const newEmployee = new Employee({
-        empname,
-        mail,
-        password,
-        age,
-        Employeestatus,
-        rating,
-        projectspending,
-        organization: organization._id,
+          empname,
+          mail,
+          password,
+          age,
+          Employeestatus,
+          rating,
+          projectspending,
+          organization: organization._id,
       });
-      
-      const organization_name=organization.organization_name;
+
       await newEmployee.save();
-  
+
       organization.employees.push(newEmployee._id);
       await organization.save();
+
       await transporter.sendMail({
-        from: process.env.EMAIL_USER,
-        to: mail,
-        subject: `Welcome Onboard..You Are Now Officially an Employee in ${organization_name}`,
-        text: `Hello ${empname},\n\nHere are your Login Details!\n\nYour Email-ID is: ${mail}\n\nYour password: ${password}..\n\n
-        Your Admin for the ${organization_name} is ${admin.empname}. Contact him using ${admin.mail}.\n\n
-        Head To Employee Dashboard and change your Password\n\nBest regards,\n\nThis is an auto-generated email, please do not reply.`,
-    });
+          from: process.env.EMAIL_USER,
+          to: mail,
+          subject: `Welcome Onboard..You Are Now Officially an Employee in ${organization.organization_name}`,
+          text: `Hello ${empname},\n\nHere are your Login Details!\n\nYour Email-ID is: ${mail}\n\nYour password: ${password}..\n\n
+          Your Admin for the ${organization.organization_name} is ${admin.empname}. Contact him using ${admin.mail}.\n\n
+          Head To Employee Dashboard and change your Password\n\nBest regards,\n\nThis is an auto-generated email, please do not reply.`,
+      });
 
       return res.status(200).json({
-        message: "Added Employee Successfully",
-        success: true
+          message: "Added Employee Successfully",
+          success: true,
       });
-    } catch (error) {
-      console.error('Error adding employee:', error);
-      return res.status(500).json({
-        message: "Failed to add Employee",
-        success: false,
-      });
-    }
-  };
-  
+
+  } catch (error) {
+      next(error); 
+  }
+};
+
 export const getallemployees = async (req, res) => {
   const { organizationId } = req.params;
 
